@@ -9,6 +9,7 @@ from django.template import Template, Context
 from django.http import HttpResponse
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
+from dbsearch.models import Item
 
 def hello(request):
     return HttpResponse("Hello World!")
@@ -27,3 +28,12 @@ def hours_ahead(request, offset):
         raise Http404()
     next_time = datetime.datetime.now() + datetime.timedelta(hours = hour_offset)
     return render_to_response('hours_ahead.html', locals()) 
+
+def goods(request):
+    titleList = Item.objects.all()[:10]
+    return render_to_response('goods.html', {'item_list': titleList}) 
+
+def testBootstrap(request):
+    titleList = Item.objects.all()[:10]
+    t0 = titleList[0]
+    return render_to_response('testbootstrap.html', {'title0': titleList[0]}) 

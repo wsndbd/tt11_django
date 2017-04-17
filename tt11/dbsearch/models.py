@@ -150,6 +150,9 @@ class Item(models.Model):
     sellernick = models.CharField(max_length=128, blank=True, null=True)
     num_iid = models.CharField(max_length=128)
 
+    def __unicode__(self):
+        return self.title
+
     class Meta:
         managed = False
         db_table = 'item'
