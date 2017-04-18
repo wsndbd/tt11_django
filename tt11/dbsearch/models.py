@@ -151,7 +151,7 @@ class Item(models.Model):
     num_iid = models.CharField(max_length=128)
 
     def __unicode__(self):
-        return self.title
+        return u'%s|||%s|||%f' %(self.title, self.img_url, self.price)
 
     class Meta:
         managed = False
