@@ -1,0 +1,330 @@
+2017-04-20 04:21:45,148[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 43, in testBootstrap
+    str = ''.join(t0)
+TypeError
+2017-04-20 04:23:57,313[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 43, in testBootstrap
+    str = ''.join(t0)
+TypeError
+2017-04-20 04:25:15,186[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 44, in testBootstrap
+    str = ''.join(t0)
+TypeError
+2017-04-20 04:27:10,808[views.py:42] - ufck here!!!!!!!!!!!!!!
+2017-04-20 04:27:10,809[views.py:43] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 04:27:10,809[views.py:45] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 04:27:10,811[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 46, in testBootstrap
+    t0 = titleList[0].split('|||')
+AttributeError: 'Item' object has no attribute 'split'
+2017-04-20 04:29:52,197[views.py:41] - <QuerySet [<Item:                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000>, <Item:                 MUJI 无印良品 W4SE211 女式弹力紧身裤                |||http://www.happystr.com/pic/5889473a082e0457.jpg_d250.jpg|||99.000000>, <Item:                 ZARA 18071104008 女款真皮背包                |||http://www.happystr.com/pic/58894529a2d0c2657.png_d250.jpg|||129.000000>, <Item:                 Rapido韩国三星 秋冬新品女士运动休闲夹棉夹克CP6838P72                |||http://www.happystr.com/pic/588945435ceaf6156.jpg_d250.jpg|||979.000000>, <Item:                 男装 牛仔茄克(水洗产品) 196708 优衣库UNIQLO                |||http://www.happystr.com/pic/58894730e85353961.jpg_d250.jpg|||249.000000>, <Item:                 ZARA 02969264735 女士真皮夹克                |||http://www.happystr.com/pic/58804e674ef198504.png_d250.jpg|||199.000000>, <Item:                 迪卡侬 运动T恤男 春夏室内跑步健身透气速干短袖T恤DOMYOS ME                |||http://www.happystr.com/pic/585e3f8bcebd97170.jpg_d250.jpg|||9.900000>, <Item:                 ZARA 女包 硬质背包 18464104020                |||http://www.happystr.com/pic/5889499d198ce3136.jpg_d250.jpg|||99.000000>, <Item:                 秋冬折扣 Oysho Travel 系列居家芭蕾鞋 15062161004                |||http://www.happystr.com/pic/588949e5163067110.jpg_d250.jpg|||49.000000>, <Item:                 ZARA 07522250620 女士羊毛混纺双纽扣大衣                |||http://www.happystr.com/pic/586f3cbf864141511.png_d250.jpg|||299.000000>]>
+2017-04-20 04:29:52,204[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 44, in testBootstrap
+    assert False
+AssertionError
+2017-04-20 05:01:39,675[views.py:41] - <QuerySet [<Item:                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000>, <Item:                 MUJI 无印良品 W4SE211 女式弹力紧身裤                |||http://www.happystr.com/pic/5889473a082e0457.jpg_d250.jpg|||99.000000>, <Item:                 ZARA 18071104008 女款真皮背包                |||http://www.happystr.com/pic/58894529a2d0c2657.png_d250.jpg|||129.000000>, <Item:                 Rapido韩国三星 秋冬新品女士运动休闲夹棉夹克CP6838P72                |||http://www.happystr.com/pic/588945435ceaf6156.jpg_d250.jpg|||979.000000>, <Item:                 男装 牛仔茄克(水洗产品) 196708 优衣库UNIQLO                |||http://www.happystr.com/pic/58894730e85353961.jpg_d250.jpg|||249.000000>, <Item:                 ZARA 02969264735 女士真皮夹克                |||http://www.happystr.com/pic/58804e674ef198504.png_d250.jpg|||199.000000>, <Item:                 迪卡侬 运动T恤男 春夏室内跑步健身透气速干短袖T恤DOMYOS ME                |||http://www.happystr.com/pic/585e3f8bcebd97170.jpg_d250.jpg|||9.900000>, <Item:                 ZARA 女包 硬质背包 18464104020                |||http://www.happystr.com/pic/5889499d198ce3136.jpg_d250.jpg|||99.000000>, <Item:                 秋冬折扣 Oysho Travel 系列居家芭蕾鞋 15062161004                |||http://www.happystr.com/pic/588949e5163067110.jpg_d250.jpg|||49.000000>, <Item:                 ZARA 07522250620 女士羊毛混纺双纽扣大衣                |||http://www.happystr.com/pic/586f3cbf864141511.png_d250.jpg|||299.000000>]>
+2017-04-20 05:01:39,679[views.py:43] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 05:01:39,679[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 45, in testBootstrap
+    logger.info(tp)
+NameError: global name 'tp' is not defined
+2017-04-20 05:02:39,749[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 43, in testBootstrap
+    logger.info(str1)
+TypeError
+2017-04-20 05:06:57,317[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 43, in testBootstrap
+    logger.info(str1)
+TypeError
+2017-04-20 05:07:55,997[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 44, in testBootstrap
+    t0 = str1.split('|||')
+TypeError
+2017-04-20 05:08:20,493[views.py:42] - ufck here!!!!!!!!!!!!!!
+2017-04-20 05:08:20,494[views.py:43] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 05:08:20,494[views.py:45] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 05:08:20,496[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 46, in testBootstrap
+    assert False
+AttributeError: 'Item' object has no attribute 'split'
+2017-04-20 05:08:59,303[views.py:41] - <QuerySet [<Item:                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000>, <Item:                 MUJI 无印良品 W4SE211 女式弹力紧身裤                |||http://www.happystr.com/pic/5889473a082e0457.jpg_d250.jpg|||99.000000>, <Item:                 ZARA 18071104008 女款真皮背包                |||http://www.happystr.com/pic/58894529a2d0c2657.png_d250.jpg|||129.000000>, <Item:                 Rapido韩国三星 秋冬新品女士运动休闲夹棉夹克CP6838P72                |||http://www.happystr.com/pic/588945435ceaf6156.jpg_d250.jpg|||979.000000>, <Item:                 男装 牛仔茄克(水洗产品) 196708 优衣库UNIQLO                |||http://www.happystr.com/pic/58894730e85353961.jpg_d250.jpg|||249.000000>, <Item:                 ZARA 02969264735 女士真皮夹克                |||http://www.happystr.com/pic/58804e674ef198504.png_d250.jpg|||199.000000>, <Item:                 迪卡侬 运动T恤男 春夏室内跑步健身透气速干短袖T恤DOMYOS ME                |||http://www.happystr.com/pic/585e3f8bcebd97170.jpg_d250.jpg|||9.900000>, <Item:                 ZARA 女包 硬质背包 18464104020                |||http://www.happystr.com/pic/5889499d198ce3136.jpg_d250.jpg|||99.000000>, <Item:                 秋冬折扣 Oysho Travel 系列居家芭蕾鞋 15062161004                |||http://www.happystr.com/pic/588949e5163067110.jpg_d250.jpg|||49.000000>, <Item:                 ZARA 07522250620 女士羊毛混纺双纽扣大衣                |||http://www.happystr.com/pic/586f3cbf864141511.png_d250.jpg|||299.000000>]>
+2017-04-20 05:08:59,555[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 44, in testBootstrap
+    t0 = str1.split('|||')
+AssertionError
+2017-04-20 05:09:45,712[views.py:43] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 05:09:45,713[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 46, in testBootstrap
+    assert False
+AssertionError
+2017-04-20 05:12:20,332[views.py:43] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 05:12:20,333[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 46, in testBootstrap
+    assert False
+AssertionError
+2017-04-20 05:13:58,630[views.py:43] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 05:13:58,631[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 46, in testBootstrap
+    assert False
+AssertionError
+2017-04-20 05:16:28,345[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 41, in testBootstrap
+    logger.info("titleList" +  titleList)
+TypeError: cannot concatenate 'str' and 'QuerySet' objects
+2017-04-20 06:36:07,792[views.py:43] -                 ZARA 09009701812 女童长裤                |||http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg|||39.000000
+2017-04-20 06:36:07,797[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 46, in testBootstrap
+AssertionError
+2017-04-20 06:36:07,830[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 41, in inner
+    response = response_for_exception(request, exc)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 86, in response_for_exception
+    response = handle_uncaught_exception(request, get_resolver(get_urlconf()), sys.exc_info())
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 128, in handle_uncaught_exception
+    return debug.technical_500_response(request, *exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 84, in technical_500_response
+    html = reporter.get_traceback_html()
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 328, in get_traceback_html
+    c = Context(self.get_traceback_data(), use_l10n=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 261, in get_traceback_data
+    frames = self.get_traceback_frames()
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 418, in get_traceback_frames
+    filename, lineno, 7, loader, module_name,
+  File "/usr/local/lib/python2.7/dist-packages/django/views/debug.py", line 377, in _get_lines_from_file
+    context_line = source[lineno]
+IndexError: list index out of range
+2017-04-20 06:45:03,328[exception.py:124] - Internal Server Error: /testbootstrap/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/githome/tt11_django/tt11/tt11/views.py", line 41, in testBootstrap
+    str1 = str(titleList[0])
+TypeError: cannot concatenate 'str' and 'QuerySet' objects
+2017-04-20 06:49:14,617[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-20 06:49:15,080[base.py:152] - Not Found: /pic/5888d625e1e168144.jpg_d250.jpg
+2017-04-20 06:50:11,482[base.py:152] - Not Found: /pic/5888d625e1e168144.jpg_d250.jpg
+2017-04-20 06:54:44,954[base.py:152] - Not Found: /pic/5888d625e1e168144.jpg_d250.jpg
+2017-04-20 08:05:08,116[base.py:152] - Not Found: /pic/58859c1e423f69780.jpg_d250.jpg.1
+2017-04-20 08:06:11,846[base.py:152] - Not Found: /pic/1.png
+2017-04-20 08:07:02,217[base.py:152] - Not Found: /robots.txt
+2017-04-20 09:57:41,082[base.py:152] - Not Found: /pic/58ae57c4e59c11990.jpg_d250.jpg
+2017-04-20 09:58:17,653[base.py:152] - Not Found: /pic/58b535a1577319586.png_d250.jpg
+2017-04-20 10:55:40,360[base.py:152] - Not Found: /robots.txt
+2017-04-20 10:55:57,914[base.py:152] - Not Found: /index.php/home/redirect/219
+2017-04-20 11:03:28,852[base.py:152] - Not Found: /plus/mytag_js.php
+2017-04-20 11:03:30,455[base.py:152] - Not Found: /plus/mytag_js.php
+2017-04-20 11:03:30,816[base.py:152] - Not Found: /plus/mytag_j.php
+2017-04-20 11:03:31,142[base.py:152] - Not Found: /plus/mytag_js.php
+2017-04-20 11:03:31,462[base.py:152] - Not Found: /plus/mytag_js.php
+2017-04-20 11:03:31,793[base.py:152] - Not Found: /plus/mytag_js.php
+2017-04-20 11:03:32,129[base.py:152] - Not Found: /include/code/mp.php
+2017-04-20 11:03:32,450[base.py:152] - Not Found: /include/helpers/cookie.helpea.php
+2017-04-20 11:03:32,773[base.py:152] - Not Found: /templets/plus/sky.php
+2017-04-20 11:03:33,095[base.py:152] - Not Found: /plus/cere.php
+2017-04-20 11:03:33,416[base.py:152] - Not Found: /plus/360.php
+2017-04-20 11:03:33,743[base.py:152] - Not Found: /data/safe/360.php
+2017-04-20 11:03:34,059[base.py:152] - Not Found: /include/helperss/filter.helpear.php
+2017-04-20 11:03:34,380[base.py:152] - Not Found: /dxyylc/1ndex.php
+2017-04-20 11:03:34,698[base.py:152] - Not Found: /dxyylc/md5.php
+2017-04-20 11:03:35,024[base.py:152] - Not Found: /plus/bakup.php
+2017-04-20 11:03:35,346[base.py:152] - Not Found: /plus/e7xue.php
+2017-04-20 11:03:35,613[base.py:152] - Not Found: /images/swfupload/images/uploadye.php
+2017-04-20 11:03:36,239[base.py:152] - Not Found: /plus/mybak.php
+2017-04-20 11:03:37,872[base.py:152] - Not Found: /plus/xsvip.php
+2017-04-20 11:03:38,195[base.py:152] - Not Found: /plus/laobiao.php
+2017-04-20 11:03:38,523[base.py:152] - Not Found: /data/admin/sky.php
+2017-04-20 11:03:38,851[base.py:152] - Not Found: /plus/90sec.php
+2017-04-20 11:03:39,181[base.py:152] - Not Found: /include/data/fonts/uddatasql.php
+2017-04-20 11:03:39,513[base.py:152] - Not Found: /include/ckeditor/plugins/pagebreak/images/inCahe.php
+2017-04-20 11:03:39,840[base.py:152] - Not Found: /plus/av.php
+2017-04-20 11:03:40,162[base.py:152] - Not Found: /plus/long.php
+2017-04-20 11:03:40,479[base.py:152] - Not Found: /xiaolei.php
+2017-04-20 11:03:40,802[base.py:152] - Not Found: /plus/myjs.php
+2017-04-20 11:03:41,129[base.py:152] - Not Found: /uploads/allimg/xm.php
+2017-04-20 11:03:41,443[base.py:152] - Not Found: /utility/convert/data/config.inc.php
+2017-04-20 11:03:42,314[base.py:152] - Not Found: /utility/convert/data/config.inc.php
+2017-04-20 11:03:42,631[base.py:152] - Not Found: /utility/convert/data/config.inc.php
+2017-04-20 11:03:42,953[base.py:152] - Not Found: /utility/convert/data/rom2823.php
+2017-04-20 11:03:43,291[base.py:152] - Not Found: /utility/convert/include/rom2823.php
+2017-04-20 11:03:43,613[base.py:152] - Not Found: /utility/convert/include/phpmp.php
+2017-04-20 11:03:43,946[base.py:152] - Not Found: /utility/convert/data/config.inc.php
+2017-04-20 11:03:44,267[base.py:152] - Not Found: /utility/convert/data/config.inc.php
+2017-04-20 11:03:44,596[base.py:152] - Not Found: /config/AspCms_Config.asp
+2017-04-20 11:03:44,927[base.py:152] - Not Found: /config/AspCms_Config.asp
+2017-04-20 11:03:45,254[base.py:152] - Not Found: /config/AspCms_Conn.asp
+2017-04-20 11:03:45,572[base.py:152] - Not Found: /wp-content/uploads/ftp.php
+2017-04-20 11:03:45,894[base.py:152] - Not Found: /wp-admin/js/edit.php
+2017-04-20 11:03:46,223[base.py:152] - Not Found: /wp-admin/newfile.php
+2017-04-20 11:03:46,543[base.py:152] - Not Found: /wp-content/themes/inline/edit.php
+2017-04-20 11:03:46,864[base.py:152] - Not Found: /wp-includes/css/log.php
+2017-04-20 11:03:47,180[base.py:152] - Not Found: /wp-includes/theme-compat/qiaogua.php
+2017-04-20 11:03:47,497[base.py:152] - Not Found: /wp-content/themes/light/log.php
+2017-04-20 11:03:48,358[base.py:152] - Not Found: /wp-includes/images/wlwlog.php
+2017-04-20 11:03:48,684[base.py:152] - Not Found: /phpcms/plugin/tangshi.PHp
+2017-04-20 11:03:49,001[base.py:152] - Not Found: /phpcms/plugin/weibo/tan.php
+2017-04-20 11:03:49,330[base.py:152] - Not Found: /phpsso_server/phpcms/modules/admin/top.php
+2017-04-20 11:03:49,649[base.py:152] - Not Found: /phpsso_server/phpcms/modules/admin/map.php
+2017-04-20 11:03:49,970[base.py:152] - Not Found: /phpsso_server/api/uc_client/model/cachebase.php
+2017-04-20 11:03:50,849[base.py:152] - Not Found: /phpsso_server/phpcms/libs/functions/global.top.php
+2017-04-20 11:03:51,174[base.py:152] - Not Found: /lrrpv51331.asp;.jpg
+2017-04-20 11:03:52,065[base.py:152] - Not Found: /zzz.asp;.jpg
+2017-04-20 11:03:52,395[base.py:152] - Not Found: /jycpcx.asp;.jpg
+2017-04-20 11:03:52,737[base.py:152] - Not Found: /l0s4r.asp;.jpg
+2017-04-20 11:03:53,064[base.py:152] - Not Found: /Ac2.asp;.jpg
+2017-04-20 11:03:53,386[base.py:152] - Not Found: /zixi.asp;.jpg
+2017-04-20 11:03:53,714[base.py:152] - Not Found: /jjasp.asp;.jpg
+2017-04-20 11:03:54,034[base.py:152] - Not Found: /miaojcx.asp;.jpg
+2017-04-20 11:03:54,358[base.py:152] - Not Found: /xk_com.asp;.jpg
+2017-04-20 11:03:54,682[base.py:152] - Not Found: /weki.asp
+2017-04-20 11:03:55,023[base.py:152] - Not Found: /data/s.asp
+2017-04-20 11:03:56,689[base.py:152] - Not Found: /dxyylc/md5.asp
+2017-04-20 11:03:57,012[base.py:152] - Not Found: /Somnus/Somnus.asp
+2017-04-20 11:03:57,907[base.py:152] - Not Found: /kdatebase/index_.asp
+2017-04-20 11:03:58,257[base.py:152] - Not Found: /sitemap/templates/met/SqlIn.asp
+2017-04-20 11:03:58,606[base.py:152] - Not Found: /weki.php
+2017-04-20 11:03:58,935[base.py:152] - Not Found: /data/s.php
+2017-04-20 11:03:59,254[base.py:152] - Not Found: /php168/1ist.php
+2017-04-20 11:03:59,572[base.py:152] - Not Found: /data/data/index.php
+2017-04-20 11:03:59,893[base.py:152] - Not Found: /data/conn/config.php
+2017-04-20 11:04:00,210[base.py:152] - Not Found: /book/story_dod_hjkdsafon.php
+2017-04-20 12:47:02,860[base.py:152] - Not Found: /index.php/home/redirect/336
+2017-04-20 13:52:50,174[base.py:152] - Not Found: /index.php/home/redirect/437
+2017-04-20 14:49:31,043[base.py:152] - Not Found: /robots.txt
+2017-04-20 14:49:34,233[base.py:152] - Not Found: /favicon.ico
+2017-04-20 18:52:42,326[base.py:152] - Not Found: /offer
+2017-04-21 02:03:22,961[base.py:152] - Not Found: /pic/58b7cf41e5c9f9596.jpg_d250.jpg
+2017-04-21 02:28:19,275[base.py:152] - Not Found: /pic/58b67c65cf6c5225.jpg_d250.jpg
+2017-04-21 04:51:18,853[base.py:152] - Not Found: /robots.txt
+2017-04-21 04:51:21,793[base.py:152] - Not Found: /index.php/home/search
+2017-04-21 06:13:25,350[base.py:152] - Not Found: /robots.txt
+2017-04-21 06:13:28,100[base.py:152] - Not Found: /index.php/home/search
+2017-04-21 12:21:10,435[base.py:152] - Not Found: /static/pic/1.png
+2017-04-21 12:21:24,278[base.py:152] - Not Found: /static/
+2017-04-21 12:24:41,653[base.py:152] - Not Found: /static/1.png
+2017-04-21 12:26:43,259[base.py:152] - Not Found: /static/1.png
+2017-04-21 12:42:25,860[base.py:152] - Not Found: /robots.txt
+2017-04-21 12:42:28,024[base.py:152] - Not Found: /favicon.ico
+2017-04-21 12:45:37,991[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 12:45:38,586[base.py:152] - Not Found: /pic/5888d625e1e168144.jpg_d250.jpg
+2017-04-21 12:55:26,710[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']

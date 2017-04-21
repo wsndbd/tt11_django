@@ -4,12 +4,15 @@
 ## file:   views.py
 ## author: paldinzhang(paldinzhang@tencent.com)
 ## date:   2017-03-18 04:53:40
+# coding=utf-8
 import datetime
 from django.template import Template, Context
 from django.http import HttpResponse
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
 from dbsearch.models import Item
+import logging
+logger = logging.getLogger("app");
 
 def hello(request):
     return HttpResponse("Hello World!")
@@ -35,5 +38,8 @@ def goods(request):
 
 def testBootstrap(request):
     titleList = Item.objects.all()[:10]
-    t0 = titleList[0]
-    return render_to_response('testbootstrap.html', {'title0': titleList[0]}) 
+    title0 = titleList[0]
+    str1 = str(title0)
+    t0 = str1.split('|||')
+    logger.info(t0)
+    return render_to_response('testbootstrap.html', {'title0': t0[0], 'imgurl0': t0[1]})

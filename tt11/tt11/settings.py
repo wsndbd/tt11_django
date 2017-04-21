@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 import os.path
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# base_dir is ~/githome/tt11_django
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -128,8 +129,38 @@ DEFAULT_CHARSET='utf-8'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'/tt11/static')
  
  # upload folder
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR,'/tt11/media')
+LOGGING = {
+        "version": 1,
+        "disable_existing_loggers": True,
+        "formatters": {
+            "standard": {
+                "format": "%(asctime)s[%(filename)s:%(lineno)d] - %(message)s",
+                }
+            },
+        "handlers": {
+            "file": {
+                "level": "DEBUG",
+                "class": "logging.FileHandler",
+                "formatter": "standard",
+                "filename": BASE_DIR+"/tt11/django.log",
+                },
+            },
+        "loggers" : {
+            "django.request": {
+                "handlers": ['file'],
+                "level": "DEBUG",
+                "propagate": True,
+                },
+            "app": {
+                "handlers": ['file'],
+                "level": "DEBUG",
+                "propagate": True,
+                },
+            },
+        }
+
