@@ -328,3 +328,33 @@ TypeError: cannot concatenate 'str' and 'QuerySet' objects
 2017-04-21 12:45:37,991[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
 2017-04-21 12:45:38,586[base.py:152] - Not Found: /pic/5888d625e1e168144.jpg_d250.jpg
 2017-04-21 12:55:26,710[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:06:00,937[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:06:13,044[base.py:152] - Not Found: /favicon.ico
+2017-04-21 15:06:15,117[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:08:45,911[base.py:152] - Not Found: /robots.txt
+2017-04-21 15:08:46,305[base.py:152] - Not Found: /index.php/home/search
+2017-04-21 15:09:07,125[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:09:22,326[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:10:26,686[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:12:12,674[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:13:26,312[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:15:16,855[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:15:36,178[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:16:10,298[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:18:09,242[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 15:22:23,099[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 16:35:24,691[base.py:152] - Not Found: /index.php/home/redirect/431
+2017-04-21 19:43:51,370[views.py:44] - ['                ZARA 09009701812 \xe5\xa5\xb3\xe7\xab\xa5\xe9\x95\xbf\xe8\xa3\xa4                ', 'http://www.happystr.com/static/pic/5888d625e1e168144.jpg_d250.jpg', '39.000000']
+2017-04-21 20:42:05,775[base.py:152] - Not Found: /pic/58b7acd0d8f804011.jpg_d250.jpg
+2017-04-21 20:55:18,466[base.py:152] - Not Found: /pic/58b53e3b42f701888.jpg_d250.jpg
+2017-04-21 20:56:27,631[base.py:152] - Not Found: /robots.txt
+2017-04-21 20:56:28,662[base.py:152] - Not Found: /robots.txt
+2017-04-21 20:56:29,394[base.py:152] - Not Found: /pic/583d310b56f869872.jpg_d250.jpg
+2017-04-21 20:57:42,706[base.py:152] - Not Found: /pic/58b827930ffe09653.jpg_d250.jpg
+2017-04-21 21:08:01,343[base.py:152] - Not Found: /pic/58b6acb2e81b9542.jpg_d250.jpg
+2017-04-21 21:08:46,184[base.py:152] - Not Found: /pic/58b7a4e0c2ce89163.jpg_d250.jpg
+2017-04-21 21:09:07,375[base.py:152] - Not Found: /pic/571065bf9a7fe.jpeg_d250.jpg
+2017-04-21 21:22:35,824[base.py:152] - Not Found: /index.php/home/redirect/425
+2017-04-22 07:56:44,155[base.py:152] - Not Found: /robots.txt
+2017-04-22 07:56:47,425[base.py:152] - Not Found: /index.php/home/redirect/218
+2017-04-22 07:56:59,719[base.py:152] - Not Found: /index.php/home/redirect/358
