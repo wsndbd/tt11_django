@@ -41,14 +41,16 @@ def testBootstrap(request):
     dictTitle = {}
     dictImg = {}
     items = Item.objects.all()[:pageCount]
-    logger.info(items)
+    #logger.info(items)
     for i in range(0, pageCount):
         item = items[i]
         strItem = str(item)
         ti = strItem.split('|||')
         logger.info(ti)
+        logger.info(ti[0])
+        logger.info(ti[0].decode('utf-8'))
         dictTitle['title' + str(i)] = ti[0]
         dictTitle['imgurl' + str(i)] = ti[1]
-    logger.info(dictTitle)
+    #logger.info(dictTitle)
 
     return render_to_response('testbootstrap.html', dictTitle)
