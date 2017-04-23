@@ -37,9 +37,18 @@ def goods(request):
     return render_to_response('goods.html', {'item_list': titleList}) 
 
 def testBootstrap(request):
-    titleList = Item.objects.all()[:10]
-    title0 = titleList[0]
-    str1 = str(title0)
-    t0 = str1.split('|||')
-    logger.info(t0)
-    return render_to_response('testbootstrap.html', {'title0': t0[0], 'imgurl0': t0[1]})
+    pageCount = 44
+    dictTitle = {}
+    dictImg = {}
+    items = Item.objects.all()[:pageCount]
+    logger.info(items)
+    for i in range(0, pageCount):
+        item = items[i]
+        strItem = str(item)
+        ti = strItem.split('|||')
+        logger.info(ti)
+        dictTitle['title' + str(i)] = ti[0]
+        dictTitle['imgurl' + str(i)] = ti[1]
+    logger.info(dictTitle)
+
+    return render_to_response('testbootstrap.html', dictTitle)
