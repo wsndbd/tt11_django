@@ -611,13 +611,22 @@
                 </div>
             </div>
         </div>
-        <div class = 'page'>
-            <button >上一页</button>
-            <select>
-                <option value = "1">1</option>
-                <option value = "0">0</option>
-            </select>
-            <button >下一页</button>
-        </div>
+        <tr style="white-space: nowrap">
+            {% if cur_page != 1 %}
+            <th><button class="pure-button"  onclick="reload_special_case_list_last_page(this);" >上一页</button></th>
+            {% endif %}
+            <th>第
+                <select id="specialcase_list_form_pageno" name = "pageno" onchange="reload_special_case_list(this);">
+                    {% for i in range %}
+                    <option value="{{i}}" {% if cur_page == i %} selected {% endif %}>{{i}}</option>
+                    {% endfor %}
+                </select>
+                /{{pagecount}}页
+            </th>
+            {% if cur_page != pagecount %}
+            <th><button class="pure-button"  onclick="reload_special_case_list_next_page(this);" >下一页</button></th>
+            {% endif %}
+
+        </tr>
     </body>
-</html>
+    </html>

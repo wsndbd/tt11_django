@@ -37,20 +37,31 @@ def goods(request):
     return render_to_response('goods.html', {'item_list': titleList}) 
 
 def testBootstrap(request):
-    pageCount = 44
+    pageno = int(request.GET.get("pageno", "0"))
+    countPerPage = 44
+    start = pageno * countPerPage
+    end = (pageno + 1) * countPerPage
+    itemsCount = Item.objects.count()
+    pageCount = int(itemsCount / countPerPage)
+    logger.info("pageno %d, pageCount %d, start %d, end %d", pageno, pageCount, start, end)
+    if pageno > pageCount:
+        return
     dictTitle = {}
     dictImg = {}
-    items = Item.objects.all()[:pageCount]
-    #logger.info(items)
-    for i in range(0, pageCount):
+    items = Item.objects.all()[start : end]
+    #assert(False)
+    for i in range(0, countPerPage):
         item = items[i]
         strItem = str(item)
         ti = strItem.split('|||')
-        logger.info(ti)
-        logger.info(ti[0])
-        logger.info(ti[0].decode('utf-8'))
+        #logger.info(ti)
+        #logger.info(ti[0])
+        #logger.info(ti[0].decode('utf-8'))
         dictTitle['title' + str(i)] = ti[0]
         dictTitle['imgurl' + str(i)] = ti[1]
+    dictTitle['cur_page'] = pageno
+    dictTitle['pagecount'] = pageCount
+    dictTitle['range'] = range(0, pageCount)
     #logger.info(dictTitle)
 
     return render_to_response('testbootstrap.html', dictTitle)

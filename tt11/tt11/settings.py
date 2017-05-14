@@ -26,7 +26,7 @@ SECRET_KEY = '#rger(p42qv+nd0wou^#-bdyrjf-0kl!idzklo^y)@2221!p^x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.happystr.com']
+ALLOWED_HOSTS = ['www.happystr.com', '64.173.186.10', '127.0.0.1', '[::1]']
 
 
 # Application definition
