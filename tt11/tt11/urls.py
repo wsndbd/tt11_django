@@ -27,5 +27,5 @@ urlpatterns = [
     url(r'^goods/$', goods),
     url(r'^testbootstrap/$', testBootstrap),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
-    url(r'^$', lambda r: HttpResponseRedirect('hello/')),
+    url(r'^$', lambda r: HttpResponseRedirect('goods/')),
 ]

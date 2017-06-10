@@ -32,19 +32,40 @@ def hours_ahead(request, offset):
     next_time = datetime.datetime.now() + datetime.timedelta(hours = hour_offset)
     return render_to_response('hours_ahead.html', locals()) 
 
-def goods(request):
-    titleList = Item.objects.all()[:10]
-    return render_to_response('goods.html', {'item_list': titleList}) 
+#def goods(request):
+#    titleList = Item.objects.all()[:10]
+#    return render_to_response('goods.html', {'item_list': titleList}) 
 
-def testBootstrap(request):
-    pageno = int(request.GET.get("pageno", "0"))
+def goods(request):
+    pageno = int(request.GET.get("pageno", "1"))
+    if pageno <= 0:
+        pageno = 1
     countPerPage = 44
-    start = pageno * countPerPage
-    end = (pageno + 1) * countPerPage
+    start = (pageno - 1) * countPerPage
+    end = pageno * countPerPage
     itemsCount = Item.objects.count()
-    pageCount = int(itemsCount / countPerPage)
-    logger.info("pageno %d, pageCount %d, start %d, end %d", pageno, pageCount, start, end)
-    if pageno > pageCount:
+    pageCount = int((itemsCount - 1)/ countPerPage)
+    logger.info("pageno %d, pageCount %d, start %d, end %d totalCount %d", pageno, pageCount + 1, start, end, itemsCount)
+    if pageno > pageCount + 1:
+        return
+    dictTitle['cur_page'] = pageno
+    dictTitle['pagecount'] = pageCount + 1
+    dictTitle['range'] = range(1, pageCount + 2)
+    #logger.info(dictTitle)
+
+    return render_to_response('goods.html', dictTitle)
+
+def goods(request1):
+    pageno = int(request.GET.get("pageno", "1"))
+    if pageno <= 0:
+        pageno = 1
+    countPerPage = 44
+    start = (pageno - 1) * countPerPage
+    end = pageno * countPerPage
+    itemsCount = Item.objects.count()
+    pageCount = int((itemsCount - 1)/ countPerPage)
+    logger.info("pageno %d, pageCount %d, start %d, end %d totalCount %d", pageno, pageCount + 1, start, end, itemsCount)
+    if pageno > pageCount + 1:
         return
     dictTitle = {}
     dictImg = {}
@@ -60,8 +81,8 @@ def testBootstrap(request):
         dictTitle['title' + str(i)] = ti[0]
         dictTitle['imgurl' + str(i)] = ti[1]
     dictTitle['cur_page'] = pageno
-    dictTitle['pagecount'] = pageCount
-    dictTitle['range'] = range(0, pageCount)
+    dictTitle['pagecount'] = pageCount + 1
+    dictTitle['range'] = range(1, pageCount + 2)
     #logger.info(dictTitle)
 
     return render_to_response('testbootstrap.html', dictTitle)

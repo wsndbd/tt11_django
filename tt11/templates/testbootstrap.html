@@ -6,6 +6,15 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://static.bootcss.com/www/assets/css/site.min.css?v5" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script language="javascript">
+        function reload_special_case_list_last_page() {
+            var pageno = parseInt($("#specialcase_list_form_pageno").val()) - 1;
+            window.location.href = "?pageno="+pageno;
+        }
+
+
+    </script>
     <body>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 ">
@@ -613,7 +622,9 @@
         </div>
         <tr style="white-space: nowrap">
             {% if cur_page != 1 %}
-            <th><button class="pure-button"  onclick="reload_special_case_list_last_page(this);" >上一页</button></th>
+            <form action="testbootstrap/pre" method="post">
+            <th><input type="submit" name="pre_btn" >上一页</input></th>
+            </form>
             {% endif %}
             <th>第
                 <select id="specialcase_list_form_pageno" name = "pageno" onchange="reload_special_case_list(this);">
@@ -628,5 +639,5 @@
             {% endif %}
 
         </tr>
-    </body>
-    </html>
+        </body>
+        </html>
