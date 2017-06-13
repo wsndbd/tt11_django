@@ -37,25 +37,16 @@ def hours_ahead(request, offset):
 #    return render_to_response('goods.html', {'item_list': titleList}) 
 
 def goods(request):
+    dictTitle = {}
     pageno = int(request.GET.get("pageno", "1"))
     if pageno <= 0:
         pageno = 1
-    countPerPage = 44
-    start = (pageno - 1) * countPerPage
-    end = pageno * countPerPage
-    itemsCount = Item.objects.count()
-    pageCount = int((itemsCount - 1)/ countPerPage)
-    logger.info("pageno %d, pageCount %d, start %d, end %d totalCount %d", pageno, pageCount + 1, start, end, itemsCount)
-    if pageno > pageCount + 1:
-        return
     dictTitle['cur_page'] = pageno
-    dictTitle['pagecount'] = pageCount + 1
-    dictTitle['range'] = range(1, pageCount + 2)
-    #logger.info(dictTitle)
+    logger.info("goods %s, pageno = %d", request, pageno)
 
     return render_to_response('goods.html', dictTitle)
 
-def goods(request1):
+def goods_content(request):
     pageno = int(request.GET.get("pageno", "1"))
     if pageno <= 0:
         pageno = 1
@@ -80,9 +71,6 @@ def goods(request1):
         #logger.info(ti[0].decode('utf-8'))
         dictTitle['title' + str(i)] = ti[0]
         dictTitle['imgurl' + str(i)] = ti[1]
-    dictTitle['cur_page'] = pageno
-    dictTitle['pagecount'] = pageCount + 1
-    dictTitle['range'] = range(1, pageCount + 2)
-    #logger.info(dictTitle)
+    logger.info(dictTitle)
 
-    return render_to_response('testbootstrap.html', dictTitle)
+    return render_to_response('goods_content.html', dictTitle)

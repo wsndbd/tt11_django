@@ -33,5 +33,13 @@ function reload_special_case_list() {
 }
 
 $(document).ready(function() {
-    $("#input_page").html('<input type = "hidden" id = "input_page" value = {{cur_page}}>');
+    var pageno = parseInt($("#input_page").val()) - 1;
+    console.log("response$(document).ready(function() { ", pageno);
+    $.ajax({
+        url: "/goods_content/?pageno=" + pageno,
+    }).done(function(response) {
+        console.log("response ", response);
+        $("#body").html(response);
+    });
 });
+

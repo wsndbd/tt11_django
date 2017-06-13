@@ -17,7 +17,8 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.http import HttpResponseRedirect
 from tt11.views import hello
-from tt11.views import ruiwenli, current_time, hours_ahead, goods, testBootstrap
+from tt11.views import ruiwenli, current_time, hours_ahead, goods
+from tt11.views import goods_content
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -25,7 +26,7 @@ urlpatterns = [
     url(r'^ruiwenli/$', ruiwenli),
     url(r'^time/$', current_time),
     url(r'^goods/$', goods),
-    url(r'^testbootstrap/$', testBootstrap),
+    url(r'^goods_content/$', goods_content),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
     url(r'^$', lambda r: HttpResponseRedirect('goods/')),
 ]

@@ -7,27 +7,6 @@
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://static.bootcss.com/www/assets/css/site.min.css?v5" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<body>
 <input type = "hidden" id = "input_page" value = {{cur_page}}>
 <script src="/static/goods_content.js"></script>
-<tr style="white-space: nowrap">
-    {% if cur_page != 1 %}
-    <form action="testbootstrap/pre" method="post">
-        <th><input type="submit" name="pre_btn" >上一页</input></th>
-    </form>
-    {% endif %}
-    <th>第
-        <select id="specialcase_list_form_pageno" name = "pageno" onchange="reload_special_case_list(this);">
-            {% for i in range %}
-            <option value="{{i}}" {% if cur_page == i %} selected {% endif %}>{{i}}</option>
-            {% endfor %}
-        </select>
-        /{{pagecount}}页
-    </th>
-    {% if cur_page != pagecount %}
-    <th><button class="pure-button"  onclick="reload_special_case_list_next_page(this);" >下一页</button></th>
-    {% endif %}
-
-</tr>
-</body>
 </html>
