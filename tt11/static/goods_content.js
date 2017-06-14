@@ -39,7 +39,7 @@ $(document).ready(function() {
         url: "/goods_content/?pageno=" + pageno,
     }).done(function(response) {
         console.log("response ", response);
-        $("#body").html(response);
+        $("#div_goods_content").html(response);
     });
 });
 
