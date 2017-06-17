@@ -73,7 +73,7 @@ def goods_content(request):
         dictTitle['imgurl' + str(i)] = ti[1]
     dictTitle['cur_page'] = pageno
     dictTitle['pagecount'] = pageCount
-    dictTitle['range'] = range(0, pageCount)
+    dictTitle['range'] = range(1, pageCount + 1)
     logger.info(dictTitle)
 
     return render_to_response('goods_content.html', dictTitle)

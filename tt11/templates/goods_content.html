@@ -1,3 +1,4 @@
+<script src="/static/jquery.min.js"></script>
 <div class="col-sm-6 col-md-4 col-lg-3 ">
     <div class="thumbnail" style="height: 360px;">
         <img class="lazy" src="{{imgurl0}}" width="250" height="250" alt="{{title0}}">
@@ -600,19 +601,42 @@
                     </div>
                 </div>
             </div>
-        <tr style="white-space: nowrap">
+        <div align = "center">
             {% if cur_page != 1 %}
-            <th><button class="pure-button"  onclick="reload_goods_list_pre_page(this);" >下一页</button></th>
+            <script type="text/javascript" >
+                function reload_goods_list_pre_page() {
+                    var pageno = parseInt($("#input_page").val()) - 1;
+                    if (pageno < 1)
+                    {
+                        pageno = 1;
+                    }
+
+                    window.location.href = "/goods/?pageno=" + pageno;
+                }
+            </script>
+            <button class="pure-button"  onclick="reload_goods_list_pre_page(this);" >上一页</button>
             {% endif %}
-            <th>第
-                <select id="select_pageno" name = "pageno" onchange="reload_goods_list(this);">
+            <script type="text/javascript" >
+                function reload_goods_list(){
+                    var pageno = parseInt($("#select_pageno").val());
+                    window.location.href = "/goods/?pageno=" + pageno;
+                }
+            </script>
+            第
+                <select id="select_pageno" onchange="reload_goods_list(this);">
                     {% for i in range %}
                     <option value="{{i}}" {% if cur_page == i %} selected {% endif %}>{{i}}</option>
                     {% endfor %}
                 </select>
-                /{{pagecount}}页
-            </th>
+                /{{pagecount}}
+            页
             {% if cur_page != pagecount %}
-            <th><button class="pure-button"  onclick="reload_goods_list_next_page(this);" >下一页</button></th>
+            <script type="text/javascript" >
+                function reload_goods_list_next_page() {
+                    var pageno = parseInt($("#input_page").val()) + 1;
+                    window.location.href = "/goods/?pageno=" + pageno;
+                }
+            </script>
+            <button class="pure-button"  onclick="reload_goods_list_next_page(this);" >下一页</button>
             {% endif %}
-        </tr>
+        </div>
