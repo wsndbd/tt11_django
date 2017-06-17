@@ -71,6 +71,9 @@ def goods_content(request):
         #logger.info(ti[0].decode('utf-8'))
         dictTitle['title' + str(i)] = ti[0]
         dictTitle['imgurl' + str(i)] = ti[1]
+    dictTitle['cur_page'] = pageno
+    dictTitle['pagecount'] = pageCount
+    dictTitle['range'] = range(0, pageCount)
     logger.info(dictTitle)
 
     return render_to_response('goods_content.html', dictTitle)

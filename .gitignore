@@ -1,3 +1,5 @@
 *.pyc
+*.swp
 pic
 tt11/tt11/django.log
+tt11/tags

@@ -33,7 +33,7 @@ function reload_special_case_list() {
 }
 
 $(document).ready(function() {
-    var pageno = parseInt($("#input_page").val()) - 1;
+    var pageno = parseInt($("#input_page").val());
     console.log("response$(document).ready(function() { ", pageno);
     $.ajax({
         url: "/goods_content/?pageno=" + pageno,
