@@ -9,3 +9,26 @@ $(document).ready(function() {
     });
 });
 
+function reload_goods_list_pre_page() {
+    var pageno = parseInt($("#input_page").val()) - 1;
+    if (pageno < 1)
+    {
+        pageno = 1;
+    }
+
+    window.location.href = "/goods/?pageno=" + pageno;
+}
+
+function reload_goods_list(){
+    var pageno = parseInt($("#select_pageno").val());
+    window.location.href = "/goods/?pageno=" + pageno;
+}
+
+function reload_goods_list_next_page() {
+    var pageno = parseInt($("#input_page").val()) + 1;
+    window.location.href = "/goods/?pageno=" + pageno;
+}
+
+function click_search()
+{
+}
