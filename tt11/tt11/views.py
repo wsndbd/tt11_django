@@ -14,6 +14,8 @@ from dbsearch.models import Item
 import logging
 logger = logging.getLogger("app");
 
+countPerPage = 44
+
 def hello(request):
     return HttpResponse("Hello World!")
 
@@ -50,7 +52,7 @@ def goods_content(request):
     pageno = int(request.GET.get("pageno", "1"))
     if pageno <= 0:
         pageno = 1
-    countPerPage = 44
+    global countPerPage
     start = (pageno - 1) * countPerPage
     end = pageno * countPerPage
     itemsCount = Item.objects.count()
@@ -74,7 +76,7 @@ def goods_content(request):
     dictTitle['cur_page'] = pageno
     dictTitle['pagecount'] = pageCount
     dictTitle['range'] = range(1, pageCount + 1)
-    logger.info(dictTitle)
+    #logger.info(dictTitle)
 
     return render_to_response('goods_content.html', dictTitle)
 
@@ -82,17 +84,19 @@ def search_goods_content(request):
     pageno = int(request.GET.get("pageno", "1"))
     if pageno <= 0:
         pageno = 1
-    countPerPage = 44
+    global countPerPage
     start = (pageno - 1) * countPerPage
     end = pageno * countPerPage
-    itemsCount = Item.objects.count()
+    keyword = request.GET.get("keyword")
+    logger.info("keyword", keyword);
+    items = Item.objects.filter(title__icontains = keyword)[start : end]
+    logger.info(Item.objects.filter(title__icontains = keyword))
+    itemsCount = items.count();
     pageCount = int((itemsCount - 1)/ countPerPage)
-    logger.info("pageno %d, pageCount %d, start %d, end %d totalCount %d", pageno, pageCount + 1, start, end, itemsCount)
     if pageno > pageCount + 1:
         return
     dictTitle = {}
     dictImg = {}
-    items = Item.objects.all()[start : end]
     #assert(False)
     for i in range(0, countPerPage):
         item = items[i]
@@ -106,6 +110,5 @@ def search_goods_content(request):
     dictTitle['cur_page'] = pageno
     dictTitle['pagecount'] = pageCount
     dictTitle['range'] = range(1, pageCount + 1)
-    logger.info(dictTitle)
 
     return render_to_response('goods_content.html', dictTitle)

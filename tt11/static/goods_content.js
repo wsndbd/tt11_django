@@ -4,7 +4,6 @@ $(document).ready(function() {
     $.ajax({
         url: "/goods_content/?pageno=" + pageno,
     }).done(function(response) {
-        console.log("response ", response);
         $("#div_goods_content").html(response);
     });
 });
@@ -31,4 +30,12 @@ function reload_goods_list_next_page() {
 
 function click_search()
 {
+    var keyword = $("input[name = keyword]").val().trim();
+    var pageno = parseInt($("#input_page").val());
+    $.ajax({
+        url: "/search_goods/?pageno=" + pageno + "&keyword=" + keyword,
+    }).done(function(response) {
+        console.log("response ", response);
+        $("#div_goods_content").html(response);
+    });
 }
