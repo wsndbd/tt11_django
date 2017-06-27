@@ -56,15 +56,15 @@ def goods_content(request):
     start = (pageno - 1) * countPerPage
     end = pageno * countPerPage
     itemsCount = Item.objects.count()
-    pageCount = int((itemsCount - 1)/ countPerPage)
-    logger.info("pageno %d, pageCount %d, start %d, end %d totalCount %d", pageno, pageCount + 1, start, end, itemsCount)
-    if pageno > pageCount + 1:
+    pageCount = int((itemsCount - 1)/ countPerPage) + 1
+    logger.info("pageno %d, pageCount %d, start %d, end %d totalCount %d", pageno, pageCount, start, end, itemsCount)
+    if pageno > pageCount:
         return
     dictTitle = {}
     dictImg = {}
     items = Item.objects.all()[start : end]
     #assert(False)
-    for i in range(0, countPerPage):
+    for i in range(0, min(countPerPage, items.count())):
         item = items[i]
         strItem = str(item)
         ti = strItem.split('|||')
@@ -75,7 +75,7 @@ def goods_content(request):
         dictTitle['imgurl' + str(i)] = ti[1]
     dictTitle['cur_page'] = pageno
     dictTitle['pagecount'] = pageCount
-    dictTitle['range'] = range(1, pageCount + 1)
+    dictTitle['range'] = range(1, pageCount)
     #logger.info(dictTitle)
 
     return render_to_response('goods_content.html', dictTitle)
@@ -92,23 +92,25 @@ def search_goods_content(request):
     items = Item.objects.filter(title__icontains = keyword)[start : end]
     logger.info(Item.objects.filter(title__icontains = keyword))
     itemsCount = items.count();
-    pageCount = int((itemsCount - 1)/ countPerPage)
-    if pageno > pageCount + 1:
+    logger.info(itemsCount)
+    pageCount = int((itemsCount - 1)/ countPerPage) + 1
+    if pageno > pageCount:
         return
     dictTitle = {}
     dictImg = {}
     #assert(False)
-    for i in range(0, countPerPage):
+    for i in range(0, min(countPerPage, itemsCount)):
         item = items[i]
         strItem = str(item)
         ti = strItem.split('|||')
-        #logger.info(ti)
-        #logger.info(ti[0])
-        #logger.info(ti[0].decode('utf-8'))
+        logger.info(ti)
+        logger.info(ti[0])
+        logger.info(ti[0].decode('utf-8'))
         dictTitle['title' + str(i)] = ti[0]
         dictTitle['imgurl' + str(i)] = ti[1]
     dictTitle['cur_page'] = pageno
     dictTitle['pagecount'] = pageCount
-    dictTitle['range'] = range(1, pageCount + 1)
+    dictTitle['range'] = range(1, pageCount)
+    logger.info("range", dictTitle["range"])
 
     return render_to_response('goods_content.html', dictTitle)
