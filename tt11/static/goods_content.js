@@ -14,8 +14,14 @@ function reload_goods_list_pre_page() {
     {
         pageno = 1;
     }
-
-    window.location.href = "/goods/?pageno=" + pageno;
+    let url = "/goods/?pageno=" + pageno;
+    let keyword = $("input[name = keyword]").val().trim();
+    let type = parseInt($("#input_type").val());
+    if (1 == type)
+    {
+        url += "&keyword=" + keyword;
+    }
+    window.location.href = url; 
 }
 
 function reload_goods_list(){
@@ -33,9 +39,10 @@ function click_search()
     var keyword = $("input[name = keyword]").val().trim();
     var pageno = parseInt($("#input_page").val());
     $.ajax({
-        url: "/search_goods/?pageno=" + pageno + "&keyword=" + keyword,
+        url: "/search_goods/?pageno=" + 1 + "&keyword=" + keyword,
     }).done(function(response) {
         console.log("response ", response);
         $("#div_goods_content").html(response);
+        $("#input_type").html('<input type = "hidden" id = "input_type" value = "1">');
     });
 }

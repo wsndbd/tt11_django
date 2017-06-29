@@ -75,7 +75,7 @@ def goods_content(request):
         dictTitle['imgurl' + str(i)] = ti[1]
     dictTitle['cur_page'] = pageno
     dictTitle['pagecount'] = pageCount
-    dictTitle['range'] = range(1, pageCount)
+    dictTitle['range'] = range(1, pageCount + 1)
     #logger.info(dictTitle)
 
     return render_to_response('goods_content.html', dictTitle)
@@ -88,12 +88,12 @@ def search_goods_content(request):
     start = (pageno - 1) * countPerPage
     end = pageno * countPerPage
     keyword = request.GET.get("keyword")
-    logger.info("keyword", keyword);
+    logger.info("keyword", keyword)
     items = Item.objects.filter(title__icontains = keyword)[start : end]
-    logger.info(Item.objects.filter(title__icontains = keyword))
-    itemsCount = items.count();
-    logger.info(itemsCount)
+    itemsCount = items.count()
+    logger.info("itemsCount", itemsCount)
     pageCount = int((itemsCount - 1)/ countPerPage) + 1
+    logger.info("search_goods_content pageno", pageno, "pagecount", pageCount)
     if pageno > pageCount:
         return
     dictTitle = {}
@@ -103,14 +103,14 @@ def search_goods_content(request):
         item = items[i]
         strItem = str(item)
         ti = strItem.split('|||')
-        logger.info(ti)
-        logger.info(ti[0])
-        logger.info(ti[0].decode('utf-8'))
+        #logger.info(ti)
+        #logger.info(ti[0])
+        #logger.info(ti[0].decode('utf-8'))
         dictTitle['title' + str(i)] = ti[0]
         dictTitle['imgurl' + str(i)] = ti[1]
     dictTitle['cur_page'] = pageno
     dictTitle['pagecount'] = pageCount
-    dictTitle['range'] = range(1, pageCount)
-    logger.info("range", dictTitle["range"])
+    dictTitle['range'] = range(1, pageCount + 1)
+    logger.info(dictTitle["range"])
 
     return render_to_response('goods_content.html', dictTitle)
