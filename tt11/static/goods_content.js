@@ -1,6 +1,10 @@
 $(document).ready(function() {
     var pageno = parseInt($("#input_page").val());
-    console.log("response$(document).ready(function() { ", pageno);
+    if (!pageno)
+    {
+        pageno = 1;
+    }
+    //console.log("response$(document).ready(function() { ", pageno);
     $.ajax({
         url: "/goods_content/?pageno=" + pageno,
     }).done(function(response) {
@@ -14,35 +18,47 @@ function reload_goods_list_pre_page() {
     {
         pageno = 1;
     }
-    let url = "/goods/?pageno=" + pageno;
-    let keyword = $("input[name = keyword]").val().trim();
-    let type = parseInt($("#input_type").val());
-    if (1 == type)
-    {
-        url += "&keyword=" + keyword;
-    }
-    window.location.href = url; 
+    goto_page(pageno);    
 }
 
 function reload_goods_list(){
     var pageno = parseInt($("#select_pageno").val());
-    window.location.href = "/goods/?pageno=" + pageno;
+    goto_page(pageno);
 }
 
 function reload_goods_list_next_page() {
     var pageno = parseInt($("#input_page").val()) + 1;
-    window.location.href = "/goods/?pageno=" + pageno;
+    goto_page(pageno);
 }
 
 function click_search()
 {
     var keyword = $("input[name = keyword]").val().trim();
+    document.getElementById("input_page").value = 1;
     var pageno = parseInt($("#input_page").val());
     $.ajax({
         url: "/search_goods/?pageno=" + 1 + "&keyword=" + keyword,
     }).done(function(response) {
-        console.log("response ", response);
         $("#div_goods_content").html(response);
-        $("#input_type").html('<input type = "hidden" id = "input_type" value = "1">');
+        document.getElementById("input_type").value = 1;
+    });
+}
+
+function goto_page(pageno)
+{
+    let url = "/goods_content/?pageno=" + pageno;
+
+    let type = parseInt($("#input_type").val());
+    if (1 == type)
+    {
+        let keyword = $("input[name = keyword]").val().trim();
+        url = "/search_goods/?pageno=" + pageno + "&keyword=" + keyword;
+    }
+
+    $.ajax({
+        url: url,
+    }).done(function(response) {
+        $("#div_goods_content").html(response);
+        document.getElementById("input_page").value = pageno;
     });
 }

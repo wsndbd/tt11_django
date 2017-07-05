@@ -89,18 +89,20 @@ def search_goods_content(request):
     end = pageno * countPerPage
     keyword = request.GET.get("keyword")
     logger.info("keyword", keyword)
-    items = Item.objects.filter(title__icontains = keyword)[start : end]
+    items = Item.objects.filter(title__icontains = keyword)
     itemsCount = items.count()
     logger.info("itemsCount", itemsCount)
     pageCount = int((itemsCount - 1)/ countPerPage) + 1
     logger.info("search_goods_content pageno", pageno, "pagecount", pageCount)
     if pageno > pageCount:
         return
+    itemsCurPage = items[start : end]
+    itemsCurPageCount = itemsCurPage.count()
     dictTitle = {}
     dictImg = {}
     #assert(False)
-    for i in range(0, min(countPerPage, itemsCount)):
-        item = items[i]
+    for i in range(0, min(countPerPage, itemsCurPageCount)):
+        item = itemsCurPage[i]
         strItem = str(item)
         ti = strItem.split('|||')
         #logger.info(ti)
